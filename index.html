@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Antar Jemput UKSW & Sekitarnya</title>
+  <meta name="description" content="Layanan antar jemput kos-kampus UKSW & sekitarnya. Lebih murah dari ojek online, jadwal fleksibel, bisa pesan jauh-jauh hari." />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    :root{
+      --brand:#2563eb; /* blue-600 */
+      --brand-2:#1e40af; /* blue-800 */
+      --accent:#22c55e; /* green-500 */
+      --soft:#eef2ff; /* indigo-50 */
+    }
+    body{ font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial; }
+    .navbar-brand span{ font-weight:800; letter-spacing:.3px; }
+    .badge-soft{ background:rgba(37,99,235,.12); color:var(--brand); border:1px solid rgba(37,99,235,.18); }
+    .hero{
+      background: radial-gradient(1200px 600px at 80% -10%, rgba(37,99,235,.15), transparent),
+                  linear-gradient(180deg, #fff, #f8fafc 18%, #f1f5f9 100%);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero::after{
+      content:""; position:absolute; inset:auto -10% -30% -10%; height:260px;
+      background:linear-gradient(90deg, rgba(37,99,235,.08), rgba(34,197,94,.08));
+      filter: blur(40px);
+    }
+    .glass{ background: rgba(255,255,255,.7); backdrop-filter: blur(8px); border:1px solid rgba(2,6,23,.06); }
+    .feature-icon{ width:52px; height:52px; display:grid; place-items:center; border-radius:14px; background:var(--soft); color:var(--brand); }
+    .card{ border:1px solid rgba(2,6,23,.06); border-radius:18px; }
+    .card-pricing{ border:2px solid var(--brand); box-shadow:0 12px 30px -10px rgba(37,99,235,.35); }
+    .qr-box{ border:2px dashed #94a3b8; border-radius:16px; aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; color:#64748b; font-weight:600; background:#f8fafc; }
+    .floating-cta{
+      position:fixed; right:16px; bottom:16px; z-index:1080;
+      box-shadow:0 8px 24px rgba(2,6,23,.18); border-radius:999px;
+      background:var(--accent); color:#fff; border:none; padding:12px 18px; font-weight:700;
+    }
+    .btn-brand{ background:var(--brand); border-color:var(--brand); }
+    .btn-brand:hover{ background:var(--brand-2); border-color:var(--brand-2); }
+    .divider{ height:1px; background:linear-gradient(90deg, transparent, rgba(2,6,23,.12), transparent); }
+    .list-check i{ color:var(--accent); }
+    .shadow-soft{ box-shadow:0 20px 60px -30px rgba(2,6,23,.25); }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top border-bottom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <i class="bi bi-bus-front-fill text-primary fs-4"></i>
+        <span>Antar Jemput UKSW</span>
+        <span class="badge badge-soft ms-2">Hemat Mahasiswa</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#fitur">Fitur</a></li>
+          <li class="nav-item"><a class="nav-link" href="#harga">Harga</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pesan">Pesan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero py-5 py-lg-6">
+    <div class="container">
+      <div class="row align-items-center g-4 g-lg-5">
+        <div class="col-lg-6">
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill glass mb-3">
+            <i class="bi bi-lightning-charge-fill text-warning"></i>
+            <small class="fw-semibold">Antar Jemput UKSW & Sekitarnya</small>
+          </div>
+          <h1 class="display-5 fw-bold lh-tight">Pergi Kuliah Jadi <span class="text-primary">Gampang & Hemat</span></h1>
+          <p class="lead text-secondary mt-3">Harga lebih murah dari ojek online 🚖, jadwal fleksibel ⏰, dan bisa pesan jauh-jauh hari 📅. Mulai <span class="fw-bold">Rp7.000 – Rp11.000</span> sekali jalan.</p>
+          <div class="d-flex gap-2 flex-wrap mt-3">
+            <a href="#pesan" class="btn btn-brand btn-lg px-4"><i class="bi bi-whatsapp me-2"></i>Pesan Sekarang</a>
+            <a href="#harga" class="btn btn-outline-primary btn-lg px-4">Lihat Harga</a>
+          </div>
+          <div class="d-flex align-items-center gap-3 mt-4 list-check">
+            <div class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill"></i><small>Diskon 50% setelah 5x pemesanan</small></div>
+            <div class="d-none d-md-flex align-items-center gap-2"><i class="bi bi-check-circle-fill"></i><small>Area Kampus & Kos Sekitar</small></div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card shadow-soft p-3">
+            <div class="card-body">
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="feature-icon"><i class="bi bi-cash-coin fs-4"></i></div>
+                  <h6 class="mt-2 mb-0">Lebih Murah</h6>
+                  <small class="text-secondary">Hemat kantong mahasiswa</small>
+                </div>
+                <div class="col-6">
+                  <div class="feature-icon"><i class="bi bi-calendar-check fs-4"></i></div>
+                  <h6 class="mt-2 mb-0">Jadwal Fleksibel</h6>
+                  <small class="text-secondary">Ngikut jam kuliahmu</small>
+                </div>
+                <div class="col-6">
+                  <div class="feature-icon"><i class="bi bi-alarm fs-4"></i></div>
+                  <h6 class="mt-2 mb-0">Booking Awal</h6>
+                  <small class="text-secondary">Bisa pesan jauh-jauh hari</small>
+                </div>
+                <div class="col-6">
+                  <div class="feature-icon"><i class="bi bi-geo-alt fs-4"></i></div>
+                  <h6 class="mt-2 mb-0">Kampus & Sekitarnya</h6>
+                  <small class="text-secondary">UKSW dan area kos</small>
+                </div>
+              </div>
+              <div class="divider my-4"></div>
+              <div class="row g-3 align-items-end">
+                <div class="col-md-7">
+                  <label class="form-label">Estimator Jarak (km)</label>
+                  <input type="range" min="1" max="6" value="3" class="form-range" id="rangeKm" />
+                </div>
+                <div class="col-md-5">
+                  <div class="p-3 rounded-3 bg-light border text-center">
+                    <div class="small text-secondary">Perkiraan Harga</div>
+                    <div class="h4 mb-0" id="pricePreview">Rp9.000</div>
+                    <small class="text-secondary">(range Rp7.000–Rp11.000)</small>
+                  </div>
+                </div>
+              </div>
+              <small class="d-block mt-2 text-secondary">*Hanya simulasi. Harga final tergantung rute & kondisi jalan.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fitur -->
+  <section id="fitur" class="py-5">
+    <div class="container">
+      <div class="row mb-4 align-items-end">
+        <div class="col-md-8">
+          <h2 class="fw-bold">Kenapa Pilih Kami?</h2>
+          <p class="text-secondary mb-0">Fokus layanan: anjem UKSW dan sekitarnya dengan harga aman di kantong.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="feature-icon mb-3"><i class="bi bi-currency-exchange fs-4"></i></div>
+              <h5>Harga Lebih Murah</h5>
+              <p class="text-secondary mb-0">Biaya sekali jalan lebih rendah dibanding ojek online pada rute kampus & kos sekitar.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="feature-icon mb-3"><i class="bi bi-calendar2-week fs-4"></i></div>
+              <h5>Fleksibel Sesuai Jam Kuliah</h5>
+              <p class="text-secondary mb-0">Atur jadwal pergi-pulang kuliah tanpa ribet; cocok untuk kelas pagi atau malam.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="feature-icon mb-3"><i class="bi bi-bell fs-4"></i></div>
+              <h5>Bisa Booking Dini</h5>
+              <p class="text-secondary mb-0">Amankan slot dengan pemesanan jauh-jauh hari agar tidak kehabisan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Harga -->
+  <section id="harga" class="py-5 bg-light">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-4">
+        <div class="col-lg-8">
+          <h2 class="fw-bold">Harga Transparan & Ramah Mahasiswa</h2>
+          <p class="text-secondary">Range tarif: <strong>Rp7.000 – Rp11.000</strong> sekali jalan (tergantung jarak di sekitar kampus).</p>
+        </div>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-5">
+          <div class="card card-pricing h-100">
+            <div class="card-body p-4 p-lg-5">
+              <h5 class="mb-1">Reguler</h5>
+              <div class="display-6 fw-bold">Rp7.000 – 11.000</div>
+              <small class="text-secondary">sekali jalan (estimasi)</small>
+              <ul class="list-unstyled mt-4 list-check">
+                <li class="mb-2"><i class="bi bi-check2-circle me-2"></i>Antar jemput kampus & kos terdekat</li>
+                <li class="mb-2"><i class="bi bi-check2-circle me-2"></i>Jadwal fleksibel</li>
+                <li class="mb-2"><i class="bi bi-check2-circle me-2"></i>Bisa booking harian/mingguan</li>
+                <li class="mb-2"><i class="bi bi-check2-circle me-2"></i>Diskon 50% setelah 5x pemesanan</li>
+              </ul>
+              <a href="#pesan" class="btn btn-brand w-100 btn-lg"><i class="bi bi-whatsapp me-2"></i>Pesan via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pesan -->
+  <section id="pesan" class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-6">
+          <h2 class="fw-bold">Pesan Cepat</h2>
+          <p class="text-secondary">Isi form di bawah untuk generate pesan WhatsApp otomatis. Kamu juga bisa langsung klik nomor yang tersedia.</p>
+          <form class="row g-3" id="orderForm">
+            <div class="col-12">
+              <label for="nama" class="form-label">Nama</label>
+              <input type="text" id="nama" class="form-control" placeholder="Nama lengkap" required />
+            </div>
+            <div class="col-md-6">
+              <label for="pickup" class="form-label">Titik Jemput</label>
+              <input type="text" id="pickup" class="form-control" placeholder="Contoh: Kos Dahlia 3" required />
+            </div>
+            <div class="col-md-6">
+              <label for="drop" class="form-label">Tujuan</label>
+              <input type="text" id="drop" class="form-control" placeholder="Contoh: Fakultas Teknik UKSW" required />
+            </div>
+            <div class="col-md-6">
+              <label for="tanggal" class="form-label">Tanggal</label>
+              <input type="date" id="tanggal" class="form-control" required />
+            </div>
+            <div class="col-md-6">
+              <label for="jam" class="form-label">Jam</label>
+              <input type="time" id="jam" class="form-control" required />
+            </div>
+            <div class="col-12">
+              <label for="catatan" class="form-label">Catatan (opsional)</label>
+              <input type="text" id="catatan" class="form-control" placeholder="Contoh: bawa helm, kelas mulai 07.30" />
+            </div>
+            <div class="col-12 d-flex gap-2 flex-wrap">
+              <button type="button" class="btn btn-success" data-wa="0895367311121"><i class="bi bi-whatsapp me-2"></i>Kirim ke 0895-3673-11121</button>
+              <button type="button" class="btn btn-outline-success" data-wa="085824454576"><i class="bi bi-whatsapp me-2"></i>Kirim ke 0858-2445-4576</button>
+            </div>
+          </form>
+
+          <div class="mt-4">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-instagram"></i>
+              <a href="https://instagram.com/wiyosopeter" class="link-underline link-underline-opacity-0" target="_blank" rel="noopener">@wiyosopeter</a>
+              <span class="text-secondary">•</span>
+              <a href="https://instagram.com/_prasetyanto" class="link-underline link-underline-opacity-0" target="_blank" rel="noopener">@_prasetyanto</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="row g-4">
+            <div class="col-6">
+              <div class="qr-box">QR WA 1 (tempatkan gambar)</div>
+            </div>
+            <div class="col-6">
+              <div class="qr-box">QR WA 2 (tempatkan gambar)</div>
+            </div>
+            <div class="col-12">
+              <div class="alert alert-primary d-flex align-items-center" role="alert">
+                <i class="bi bi-gift fs-4 me-3"></i>
+                <div>
+                  <strong>Promo!</strong> Diskon 50% setelah 5x pemesanan. Simpan bukti order untuk klaim ya ✨
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="mb-2"><i class="bi bi-geo-alt me-2"></i>Area Layanan</h5>
+                  <p class="text-secondary mb-2">Fokus di Kampus UKSW dan kos/permukiman sekitar kampus.</p>
+                  <ul class="mb-0 text-secondary">
+                    <li>Rute kos ⇄ kampus</li>
+                    <li>Jam fleksibel mengikuti jadwal kuliah</li>
+                    <li>Booking harian atau mingguan</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni (opsional dummy) -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-4">
+        <div class="col-lg-8">
+          <h2 class="fw-bold">Apa Kata Pengguna</h2>
+          <p class="text-secondary">Sedikit cerita dari teman-teman kampus yang sudah mencoba.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center gap-3 mb-2">
+                <img src="https://api.dicebear.com/8.x/identicon/svg?seed=uksw1" width="48" height="48" class="rounded-circle" alt="avatar" />
+                <div><strong>Rani</strong><div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div></div>
+              </div>
+              <p class="mb-0 text-secondary">Lebih hemat dari ojek online, dan drivernya paham rute kampus. Recommended!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center gap-3 mb-2">
+                <img src="https://api.dicebear.com/8.x/identicon/svg?seed=uksw2" width="48" height="48" class="rounded-circle" alt="avatar" />
+                <div><strong>Yuda</strong><div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div></div>
+              </div>
+              <p class="mb-0 text-secondary">Jadwal fleksibel banget, cocok buat kelas pagi. Tinggal booking dari malam.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center gap-3 mb-2">
+                <img src="https://api.dicebear.com/8.x/identicon/svg?seed=uksw3" width="48" height="48" class="rounded-circle" alt="avatar" />
+                <div><strong>Nadia</strong><div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div></div>
+              </div>
+              <p class="mb-0 text-secondary">Ada promo 50% setelah 5x pesan, lumayan banget untuk anak kos!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <h2 class="fw-bold">Kontak</h2>
+          <p class="text-secondary">Hubungi kami melalui WhatsApp atau Instagram. Kami beroperasi setiap hari, menyesuaikan jadwal perkuliahan.</p>
+          <div class="d-grid gap-2">
+            <a href="https://wa.me/62895367311121" class="btn btn-success btn-lg" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-2"></i>WA 1: 0895-3673-11121</a>
+            <a href="https://wa.me/6285824454576" class="btn btn-outline-success btn-lg" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-2"></i>WA 2: 0858-2445-4576</a>
+            <div class="d-flex gap-2">
+              <a href="https://instagram.com/wiyosopeter" class="btn btn-outline-dark w-50" target="_blank" rel="noopener"><i class="bi bi-instagram me-2"></i>@wiyosopeter</a>
+              <a href="https://instagram.com/_prasetyanto" class="btn btn-outline-dark w-50" target="_blank" rel="noopener"><i class="bi bi-instagram me-2"></i>@_prasetyanto</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="mb-3">Catatan Layanan</h5>
+              <ul class="text-secondary mb-0">
+                <li>Mohon siap di titik jemput 5 menit sebelum jadwal.</li>
+                <li>Gratis 10 menit tunggu, lebih dari itu dikenakan biaya tambahan.</li>
+                <li>Keselamatan prioritas: helm tersedia, patuhi aturan lalu lintas.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 border-top bg-white">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+      <div class="text-secondary small">© <span id="year"></span> Antar Jemput UKSW. All rights reserved.</div>
+      <div class="small text-secondary">Made for mahasiswa • Hemat • Praktis</div>
+    </div>
+  </footer>
+
+  <button class="floating-cta" id="floatingCta"><i class="bi bi-whatsapp me-1"></i>Chat Sekarang</button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Tahun footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Estimator harga sederhana berdasarkan slider km
+    const rangeKm = document.getElementById('rangeKm');
+    const pricePreview = document.getElementById('pricePreview');
+    const priceCalc = (km)=>{
+      // linear map 1-6 km to 7k-11k
+      const minKm=1, maxKm=6, minP=7000, maxP=11000;
+      const p = Math.round(minP + (km - minKm) * (maxP - minP) / (maxKm - minKm));
+      return `Rp${p.toLocaleString('id-ID')}`;
+    };
+    rangeKm.addEventListener('input', e=>{ pricePreview.textContent = priceCalc(+e.target.value); });
+
+    // Generate pesan WA dari form
+    const form = document.getElementById('orderForm');
+    form.querySelectorAll('button[data-wa]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const nama = document.getElementById('nama').value.trim();
+        const pickup = document.getElementById('pickup').value.trim();
+        const drop = document.getElementById('drop').value.trim();
+        const tanggal = document.getElementById('tanggal').value;
+        const jam = document.getElementById('jam').value;
+        const catatan = document.getElementById('catatan').value.trim();
+        if(!nama || !pickup || !drop || !tanggal || !jam){
+          alert('Lengkapi form terlebih dahulu ya.');
+          return;
+        }
+        const msg = `Halo, saya ${nama}.\nMau pesan anjem UKSW:\n- Jemput: ${pickup}\n- Tujuan: ${drop}\n- Tanggal: ${tanggal}\n- Jam: ${jam}\n- Catatan: ${catatan || '-'}\n\nTolong infokan harga & ketersediaannya ya. Terima kasih!`;
+        const phone = btn.getAttribute('data-wa').replace(/\D/g,'');
+        const url = `https://wa.me/62${phone.startsWith('0') ? phone.substring(1) : phone}?text=${encodeURIComponent(msg)}`;
+        window.open(url, '_blank');
+      });
+    });
+
+    // Floating CTA
+    const floatingCta = document.getElementById('floatingCta');
+    floatingCta.addEventListener('click', ()=>{
+      // default ke nomor WA 1
+      const url = `https://wa.me/62895367311121?text=${encodeURIComponent('Halo, mau tanya ketersediaan anjem UKSW untuk hari ini.')}';
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>
